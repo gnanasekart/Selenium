@@ -18,7 +18,8 @@ import com.selenium.api.Design.Element;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class TestBase implements Element{
+public class TestBase implements Element
+{
 
 	public static WebDriver d;
 	public static Properties prop;
@@ -43,7 +44,6 @@ public class TestBase implements Element{
 			e.printStackTrace();
 		}
 	}
-
 
 	public void initialize()
 	{
@@ -92,4 +92,5 @@ public class TestBase implements Element{
 		{
 			e.printStackTrace();
 		}
-	}}
+	}
+	}
