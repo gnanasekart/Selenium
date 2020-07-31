@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite for Smoke testing">
+
+	<listeners>
+		<listener
+			class-name="com.org.qa.ExtendReportListener.ExtendReports" />
+	</listeners>
+
+	<test name="Smoke test cases">
+		<classes>
+		<class name="com.org.qa.testcases.CreateLeadPage"></class>
+			<class name="com.org.qa.testcases.LoginPageTest"></class>
+			
+		</classes>
+
+	</test> <!-- Smoke test cases -->
+</suite> <!-- Suite for Smoke testing -->
