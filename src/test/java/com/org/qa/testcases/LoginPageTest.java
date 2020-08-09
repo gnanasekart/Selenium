@@ -1,5 +1,7 @@
 package com.org.qa.testcases;
 
+import java.net.MalformedURLException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -26,7 +28,7 @@ public class LoginPageTest extends TestBase
 	}
 
 	@BeforeSuite
-	public void setup()
+	public void setup() throws MalformedURLException
 	{
 		initialize();
 		login = new Login();

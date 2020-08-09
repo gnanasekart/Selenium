@@ -3,18 +3,24 @@ package com.org.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.org.qa.util.WebEventListener;
 import com.selenium.api.Design.Element;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -45,8 +51,19 @@ public class TestBase implements Element
 		}
 	}
 
-	public void initialize()
+	public void initialize() throws MalformedURLException
 	{
+		/*
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setBrowserName("chrome");
+		dc.setPlatform(Platform.WIN10);
+		
+		ChromeOptions co = new ChromeOptions();
+		co.merge(dc);
+		
+		String baseurl = "http://192.168.43.221:4444/wd/hub";
+		WebDriver d = new RemoteWebDriver(new URL(baseurl), co);
+	*/	
 		String browser = prop.getProperty("browser");
 		if(browser.equals("chrome"))
 		{
@@ -68,6 +85,7 @@ public class TestBase implements Element
 			System.setProperty("webdriver.edge.driver", "./Drivers/msedgedriver.exe");
 			d = new EdgeDriver();
 		}
+		
 		
 		firedriver = new EventFiringWebDriver(d);
 		eventlistener = new WebEventListener();

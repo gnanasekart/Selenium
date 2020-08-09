@@ -1,6 +1,7 @@
 package com.org.qa.testcases;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,7 +27,7 @@ public class CreateLeadPage extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setUp()
+	public void setUp() throws MalformedURLException
 	{
 		initialize();
 		login = new Login();
@@ -77,7 +78,7 @@ public class CreateLeadPage extends TestBase {
 		create.verifyFirstName();
 	}
 
-	@Test(priority=4, dependsOnMethods="verifyPage", enabled=true)
+	@Test(priority=4, dependsOnMethods="verifyPage", enabled=false)
 	public void verifyfirstname()
 	{
 		create.verifyFirstName();
