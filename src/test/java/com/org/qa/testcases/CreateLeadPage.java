@@ -30,6 +30,7 @@ public class CreateLeadPage extends TestBase {
 	public void setUp() throws MalformedURLException
 	{
 		initialize();
+		d.get(prop.getProperty("url"));
 		login = new Login();
 		login.title();
 		create = login.landPage(prop.getProperty("username"), prop.getProperty("password"));

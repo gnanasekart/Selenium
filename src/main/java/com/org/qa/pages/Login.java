@@ -53,8 +53,8 @@ public class Login extends TestBase
 
 	public CreateLead landPage(String uname, String pword)
 	{	
-		username_field.sendKeys(uname);
-		password_field.sendKeys(pword);
+		clearAndType(username_field, uname);
+		clearAndType(password_field, pword);
 		loginbtn.click();
 		crmsfabtn.click();
 		return new CreateLead();

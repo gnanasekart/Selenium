@@ -38,7 +38,7 @@ public class TestBase implements Element
 		FileInputStream ip;
 		try
 		{
-			ip = new FileInputStream("D:\\eclipse\\workspace\\Selenium\\src\\main\\java\\com\\org\\qa\\config\\config.properties");
+		ip = new FileInputStream("D:\\eclipse\\workspace\\Selenium\\src\\main\\java\\com\\org\\qa\\config\\config.properties");
 			prop.load(ip);
 		} 
 		catch (FileNotFoundException e) 
@@ -97,7 +97,7 @@ public class TestBase implements Element
 		d.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		d.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
-		d.get(prop.getProperty("url"));
+		//d.get(prop.getProperty("url"));
 	}
 	
 	public void clearAndType(WebElement ele, String data)

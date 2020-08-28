@@ -9,9 +9,8 @@
 
 	<test name="Smoke test cases">
 		<classes>
+			<!-- <class name="com.org.qa.testcases.LoginPageTest"></class> -->
 			<class name="com.org.qa.testcases.CreateLeadPage"></class>
-			<class name="com.org.qa.testcases.LoginPageTest"></class>
-
 		</classes>
 
 	</test> <!-- Smoke test cases -->

@@ -31,6 +31,7 @@ public class LoginPageTest extends TestBase
 	public void setup() throws MalformedURLException
 	{
 		initialize();
+		d.get(prop.getProperty("url"));
 		login = new Login();
 	}
 
