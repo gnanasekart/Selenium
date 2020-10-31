@@ -67,7 +67,7 @@ public class TestBase implements Element
 		String browser = prop.getProperty("browser");
 		if(browser.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver84.exe");
+			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver86.exe");
 			d = new ChromeDriver();
 		}
 		else if(browser.equals("ff"))
