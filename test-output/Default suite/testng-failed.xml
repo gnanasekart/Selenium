@@ -3,14 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.org.qa.testcases.CreateLeadPage">
+      <class name="PracticesDemo.RemoteWebDrivers">
         <methods>
-          <include name="teardown"/>
-          <include name="verifyPage"/>
-          <include name="verifyfirstname"/>
-          <include name="setUp"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- com.org.qa.testcases.CreateLeadPage -->
+      </class> <!-- PracticesDemo.RemoteWebDrivers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

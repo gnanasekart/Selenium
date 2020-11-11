@@ -83,7 +83,7 @@ public class CreateLeadPage extends TestBase {
 	public void verifyfirstname()
 	{
 		create.verifyFirstName();
-		//int c = 9/0;
+		
 	}
 
 	@Test(priority=5, dependsOnMethods="verifyfirstname", enabled=false)
