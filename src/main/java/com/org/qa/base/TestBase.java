@@ -56,7 +56,7 @@ public class TestBase implements Element
 		/*
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
-		dc.setPlatform(Platform.WIN10);
+		dc.setPlatform(Platform.WINDOWS);
 		
 		ChromeOptions co = new ChromeOptions();
 		co.merge(dc);
