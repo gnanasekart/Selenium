@@ -53,20 +53,19 @@ public class TestBase implements Element
 
 	public void initialize() throws MalformedURLException
 	{
-		/*
+	/*
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
 		dc.setPlatform(Platform.WINDOWS);
-		
 		ChromeOptions co = new ChromeOptions();
 		co.merge(dc);
-		
-		String baseurl = "http://192.168.43.221:4444/wd/hub";
+		String baseurl = "localhost:4444/wd/hub";
 		WebDriver d = new RemoteWebDriver(new URL(baseurl), co);
-	*/	
+	*/
 		String browser = prop.getProperty("browser");
 		if(browser.equals("chrome"))
 		{
+			
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver86.exe");
 			d = new ChromeDriver();
 		}
