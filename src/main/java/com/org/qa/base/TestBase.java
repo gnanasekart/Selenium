@@ -54,6 +54,7 @@ public class TestBase implements Element
 	public void initialize() throws MalformedURLException
 	{
 	/*
+	 * need to add more code
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
 		dc.setPlatform(Platform.WINDOWS);
