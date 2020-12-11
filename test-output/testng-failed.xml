@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite for Smoke testing]">
+  <listeners>
+    <listener class-name="com.org.qa.ExtendReportListener.ExtendReports"/>
+  </listeners>
+  <test thread-count="5" name="Smoke test cases(failed)">
     <classes>
-      <class name="PracticesDemo.RemoteWebDrivers">
+      <class name="com.org.qa.testcases.CreateLeadPage">
         <methods>
-          <include name="main"/>
+          <include name="teardown"/>
+          <include name="verifyleadtitle"/>
+          <include name="verifyfirstname"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- PracticesDemo.RemoteWebDrivers -->
+      </class> <!-- com.org.qa.testcases.CreateLeadPage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Smoke test cases(failed) -->
+</suite> <!-- Failed suite [Suite for Smoke testing] -->

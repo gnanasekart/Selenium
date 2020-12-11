@@ -1,5 +1,7 @@
 package com.org.qa.pages;
 
-public class DeleteLead {
+import com.org.qa.base.TestBase;
+
+public class DeleteLead extends TestBase {
 
 }

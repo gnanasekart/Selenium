@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Smoke test cases(failed)">
     <classes>
-      <class name="com.org.qa.testcases.LoginPageTest">
+      <class name="com.org.qa.testcases.CreateLeadPage">
         <methods>
-          <include name="verifyPageTitle"/>
           <include name="teardown"/>
-          <include name="setup"/>
+          <include name="verifyleadtitle"/>
+          <include name="verifyfirstname"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.org.qa.testcases.LoginPageTest -->
+      </class> <!-- com.org.qa.testcases.CreateLeadPage -->
     </classes>
   </test> <!-- Smoke test cases(failed) -->
 </suite> <!-- Failed suite [Suite for Smoke testing] -->

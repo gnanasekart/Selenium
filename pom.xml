@@ -14,13 +14,22 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- <maven.test.skip>true</maven.test.skip> -->
+		<aspectj.version>1.9.4</aspectj.version>
 	</properties>
 
 	<dependencies>
+			
+			<!-- for allure report -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.12.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			 <!--<version>4.0.0-alpha-7</version> -->
+			<!--<version>4.0.0-alpha-7</version> -->
 			<version>3.141.59</version>
 		</dependency>
 
@@ -74,11 +83,17 @@
 			<version>4.1.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+			<!-- for allure report -->
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>2.41.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.2.0</version>
 		</dependency>
 
 		<dependency>
@@ -118,16 +133,34 @@
 					</executions>
 				</plugin>
 
+				<!-- Extent Report -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0-M3</version>
+
 					<configuration>
+						<properties>
+							<property>
+								<name>surefire.testng.verbose</name>
+								<value>10</value>
+							</property>
+						</properties>
 						<suiteXmlFiles>
 							<suiteXmlFile>Smoketestng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
+
+				<!-- Allure Report -->
+				<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+					<version>3.0.0-M3</version> <configuration> <properties> <property> <name>surefire.testng.verbose</name> 
+					<value>10</value> </property> </properties> <suiteXmlFiles> <suiteXmlFile>Smoketestng.xml</suiteXmlFile> 
+					</suiteXmlFiles> <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar" 
+					</argLine> </configuration> <dependencies> <dependency> <groupId>org.aspectj</groupId> 
+					<artifactId>aspectjweaver</artifactId> <version>${aspectj.version}</version> 
+					</dependency> </dependencies> </plugin> -->
+
 			</plugins>
 		</pluginManagement>
 	</build>

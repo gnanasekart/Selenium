@@ -1,5 +1,7 @@
 package com.org.qa.pages;
 
-public class EditLead {
+import com.org.qa.base.TestBase;
+
+public class EditLead extends TestBase{
 
 }

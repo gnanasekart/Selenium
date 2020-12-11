@@ -1,5 +1,7 @@
 package com.org.qa.pages;
 
-public class MergeLead {
+import com.org.qa.base.TestBase;
+
+public class MergeLead extends TestBase{
 
 }

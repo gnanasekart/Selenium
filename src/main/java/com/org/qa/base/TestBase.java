@@ -20,6 +20,8 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import com.org.qa.util.WebEventListener;
 import com.selenium.api.Design.Element;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -53,39 +55,42 @@ public class TestBase implements Element
 
 	public void initialize() throws MalformedURLException
 	{
-		/*
+		
+		
+		String browser = prop.getProperty("browser");
+		
+		if(browser.equals("gchrome")) 
+		{
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
-		dc.setPlatform(Platform.WIN10);
+		dc.setPlatform(Platform.WINDOWS);
 		
 		ChromeOptions co = new ChromeOptions();
 		co.merge(dc);
 		
 		String baseurl = "http://192.168.43.221:4444/wd/hub";
 		WebDriver d = new RemoteWebDriver(new URL(baseurl), co);
-	*/	
-		String browser = prop.getProperty("browser");
-		if(browser.equals("chrome"))
+		}
+		else if(browser.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver86.exe");
+			WebDriverManager.chromedriver().setup();
 			d = new ChromeDriver();
 		}
 		else if(browser.equals("ff"))
 		{
-			System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			d = new FirefoxDriver();
 		}
 		else if(browser.equals("ie"))
 		{
-			System.setProperty("webdriver.ie.driver", "./Drivers/IEDriverServer.exe");
+			WebDriverManager.iedriver().setup();
 			d = new InternetExplorerDriver();
 		}
 		else if(browser.equals("edge"))
 		{
-			System.setProperty("webdriver.edge.driver", "./Drivers/msedgedriver.exe");
+			WebDriverManager.edgedriver().setup();
 			d = new EdgeDriver();
 		}
-		
 		
 		firedriver = new EventFiringWebDriver(d);
 		eventlistener = new WebEventListener();

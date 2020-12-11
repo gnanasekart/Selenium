@@ -1,5 +1,7 @@
 package com.org.qa.pages;
 
-public class DuplicateLead {
+import com.org.qa.base.TestBase;
+
+public class DuplicateLead extends TestBase {
 
 }

@@ -49,16 +49,16 @@ public class CreateLead extends TestBase
 		clkcreatelead.click();
 	}
 
-	public void verifyCreateleadPageTitle()
+	public String verifyCreateleadPageTitle()
 	{	
 		String title = d.getTitle();
-		Assert.assertEquals(title, "Create Lead | opentaps CRM", "Wrong Create Lead page title");
+		return title;
 	}
 
-	public void verifyPageName()
+	public String verifyPageName()
 	{
 		String pname = pagename.getText();
-		Assert.assertEquals(pname, "Create Lead", "Wrong page name");
+		return pname;
 	}
 
 	public CreateLead enterCompanyName(String cname)
@@ -94,18 +94,16 @@ public class CreateLead extends TestBase
 		return this;
 	}
 	
-	public CreateLead verifyFirstName()
+	public String verifyFirstName()
 	{
 		String vfname = verifyname.getText();
-		Assert.assertEquals(vfname, "manoj", "correct first name");
-		return this;
+		return vfname;
 	}
 	
-	public DuplicateLead verifyViewLeadTitle()
+	public String verifyViewLeadTitle()
 	{
-		String viewlead = d.getTitle();
-		Assert.assertEquals(viewlead, "View Lead | opentaps CRM", "Correct lead page");
-		return new DuplicateLead();
+		String viewlead = d.getTitle().trim();
+		return viewlead;
 	}
 
 	public MergeLead verifyMergePage()
