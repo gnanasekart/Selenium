@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.org.qa.base.TestBase;
 
+import io.qameta.allure.Step;
+
 public class CreateLead extends TestBase
 {
 
@@ -43,13 +45,15 @@ public class CreateLead extends TestBase
 	{
 		PageFactory.initElements(d, this);
 	}
-
+	
+	@Step("Launch into CreateLead Page....")
 	public void createLead()
 	{
 		clkcreatelead.click();
 	}
 
-	public String verifyCreateleadPageTitle()
+	@Step("verifying the page title....")
+	public String verifyPageTitle()
 	{	
 		String title = d.getTitle();
 		return title;
@@ -60,30 +64,30 @@ public class CreateLead extends TestBase
 		String pname = pagename.getText();
 		return pname;
 	}
-
+	
+	@Step("Entering company name as : {0}")
 	public CreateLead enterCompanyName(String cname)
 	{
 		clearAndType(companyname, cname);
 		return this;
 	}
 
+	@Step("Entering first name as : {0}")
 	public CreateLead enterFirstName(String firstname)
 	{
-		//fname.sendKeys(firstname);
 		clearAndType(fname, firstname);
 		return this;
 	}	
 	
+	@Step("Entering last name as : {0}")
 	public CreateLead enterLastName(String lastname)
 	{
-		//fname.sendKeys(firstname);
 		clearAndType(lname, lastname);
 		return this;
 	}	
 	
 	public CreateLead enterphno(String phnum) 
 	{
-		//phno.sendKeys(phnum);
 		clearAndType(phno, phnum);
 		return this;
 	}
@@ -98,12 +102,6 @@ public class CreateLead extends TestBase
 	{
 		String vfname = verifyname.getText();
 		return vfname;
-	}
-	
-	public String verifyViewLeadTitle()
-	{
-		String viewlead = d.getTitle().trim();
-		return viewlead;
 	}
 
 	public MergeLead verifyMergePage()

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite_for_Smoke_testing">
-              <span class="suite-name border-passed">Suite for Smoke testing</span>
+              <span class="suite-name border-failed">Suite for Smoke testing</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite_for_Smoke_testing" class="hide-methods failed suite-Suite_for_Smoke_testing"> (hide)</a> <!-- hide-methods failed suite-Suite_for_Smoke_testing -->
+                      <a href="#" panel-name="suite-Suite_for_Smoke_testing" class="show-methods failed suite-Suite_for_Smoke_testing"> (show)</a> <!-- show-methods failed suite-Suite_for_Smoke_testing -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite_for_Smoke_testing">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Smoke_testing" title="com.org.qa.testcases.CreateLeadPage" hash-for-method="verifyleadtitle">verifyleadtitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite_for_Smoke_testing -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,11 +122,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Smoke_testing" title="com.org.qa.testcases.CreateLeadPage" hash-for-method="verifyfirstname">verifyfirstname</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_for_Smoke_testing" title="com.org.qa.testcases.CreateLeadPage" hash-for-method="verifyleadtitle">verifyleadtitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -137,6 +146,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite_for_Smoke_testing" class="panel Suite_for_Smoke_testing">
+          <div class="suite-Suite_for_Smoke_testing-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.org.qa.testcases.CreateLeadPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyleadtitle">
+                  </a> <!-- verifyleadtitle -->
+                  <span class="method-name">verifyleadtitle</span>
+                  <div class="stack-trace">java.lang.AssertionError: Correct lead page expected [View Lead | opentaps CRM1] but found [View Lead | opentaps CRM]
+	at com.org.qa.testcases.CreateLeadPage.verifyleadtitle(CreateLeadPage.java:120)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(This Test case From Test level to verify page title)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_for_Smoke_testing-class-failed -->
           <div class="suite-Suite_for_Smoke_testing-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -148,6 +178,8 @@
                   <a name="verifyPage">
                   </a> <!-- verifyPage -->
                   <span class="method-name">verifyPage</span>
+                  <em>
+(This Test case From Test level to Enter User details)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -155,13 +187,8 @@
                   <a name="verifyfirstname">
                   </a> <!-- verifyfirstname -->
                   <span class="method-name">verifyfirstname</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyleadtitle">
-                  </a> <!-- verifyleadtitle -->
-                  <span class="method-name">verifyleadtitle</span>
+                  <em>
+(This Test case From Test level to verify first name)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -169,6 +196,8 @@
                   <a name="verifypagename">
                   </a> <!-- verifypagename -->
                   <span class="method-name">verifypagename</span>
+                  <em>
+(This Test case From Test level to verify Page name)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -176,6 +205,8 @@
                   <a name="verifypagetitle">
                   </a> <!-- verifypagetitle -->
                   <span class="method-name">verifypagetitle</span>
+                  <em>
+(This Test case From Test level to verify Page title)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,6 +223,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite for Smoke testing&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.org.qa.ExtendReportListener.ExtendReports&quot;/&gt;
+    &lt;listener class-name=&quot;com.org.qa.Report.TestAllureReports&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Smoke test cases&quot;&gt;
     &lt;classes&gt;
@@ -239,28 +271,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyPage')
 data.setCell(0, 2, 'com.org.qa.testcases.CreateLeadPage')
-data.setCell(0, 3, 4541);
+data.setCell(0, 3, 6059);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyfirstname')
+data.setCell(1, 1, 'verifypagename')
 data.setCell(1, 2, 'com.org.qa.testcases.CreateLeadPage')
-data.setCell(1, 3, 60);
+data.setCell(1, 3, 63);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifypagename')
+data.setCell(2, 1, 'verifyfirstname')
 data.setCell(2, 2, 'com.org.qa.testcases.CreateLeadPage')
-data.setCell(2, 3, 57);
+data.setCell(2, 3, 42);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifypagetitle')
 data.setCell(3, 2, 'com.org.qa.testcases.CreateLeadPage')
-data.setCell(3, 3, 27);
+data.setCell(3, 3, 15);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyleadtitle')
 data.setCell(4, 2, 'com.org.qa.testcases.CreateLeadPage')
-data.setCell(4, 3, 11);
+data.setCell(4, 3, 15);
 window.suiteTableData['Suite_for_Smoke_testing']= { tableData: data, tableDiv: 'times-div-Suite_for_Smoke_testing'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite_for_Smoke_testing">
               </div> <!-- times-div-Suite_for_Smoke_testing -->
             </div> <!-- times-div -->
@@ -300,27 +332,29 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifypagename</span>
-                <span class="method-start">12513 ms</span>
+                <span class="method-start">16423 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifypagetitle</span>
-                <span class="method-start">12580 ms</span>
+                <span class="method-start">16499 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPage</span>
-                <span class="method-start">12612 ms</span>
+                <span class="method-start">16525 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyfirstname</span>
-                <span class="method-start">17159 ms</span>
+                <span class="method-start">22590 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyleadtitle</span>
-                <span class="method-start">17224 ms</span>
+                <span class="method-start">22637 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">17239 ms</span>
+                <span class="method-start">23218 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

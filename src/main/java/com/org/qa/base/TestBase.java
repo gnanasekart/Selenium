@@ -63,6 +63,7 @@ public class TestBase implements Element
 		{
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
+		
 		dc.setPlatform(Platform.WINDOWS);
 		
 		ChromeOptions co = new ChromeOptions();
@@ -74,7 +75,9 @@ public class TestBase implements Element
 		else if(browser.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
-			d = new ChromeDriver();
+			ChromeOptions option = new ChromeOptions();
+			option.setHeadless(true);
+			d = new ChromeDriver(option);
 		}
 		else if(browser.equals("ff"))
 		{

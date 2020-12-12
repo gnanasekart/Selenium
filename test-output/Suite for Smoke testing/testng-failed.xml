@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite for Smoke testing]">
   <listeners>
     <listener class-name="com.org.qa.ExtendReportListener.ExtendReports"/>
+    <listener class-name="com.org.qa.Report.TestAllureReports"/>
   </listeners>
   <test thread-count="5" name="Smoke test cases(failed)">
     <classes>
@@ -10,7 +11,6 @@
         <methods>
           <include name="teardown"/>
           <include name="verifyleadtitle"/>
-          <include name="verifyfirstname"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.org.qa.testcases.CreateLeadPage -->

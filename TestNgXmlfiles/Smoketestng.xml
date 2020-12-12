@@ -3,8 +3,8 @@
 <suite name="Suite for Smoke testing" >
 
 	<listeners>
-		<listener
-			class-name="com.org.qa.ExtendReportListener.ExtendReports" />
+		<listener class-name="com.org.qa.ExtendReportListener.ExtendReports" />
+		<listener class-name="com.org.qa.Report.TestAllureReports"/>
 	</listeners>
 
 	<test name="Smoke test cases">
