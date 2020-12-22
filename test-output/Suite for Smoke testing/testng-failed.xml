@@ -3,7 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite for Smoke testing]">
   <listeners>
     <listener class-name="com.org.qa.ExtendReportListener.ExtendReports"/>
-    <listener class-name="com.org.qa.Report.TestAllureReports"/>
   </listeners>
   <test thread-count="5" name="Smoke test cases(failed)">
     <classes>

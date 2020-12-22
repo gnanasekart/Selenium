@@ -33,5 +33,4 @@ public class CommonPage extends TestBase {
 		findlead.click();
 		return new DuplicateLead();
 	}
-
 }

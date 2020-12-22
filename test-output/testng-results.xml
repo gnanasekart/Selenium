@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="1" ignored="1" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite for Smoke testing" duration-ms="24055" started-at="2020-12-12T06:32:26Z" finished-at="2020-12-12T06:32:50Z">
+  <suite name="Suite for Smoke testing" duration-ms="32719" started-at="2020-12-12T10:10:41Z" finished-at="2020-12-12T10:11:14Z">
     <groups>
     </groups>
-    <test name="Smoke test cases" duration-ms="24055" started-at="2020-12-12T06:32:26Z" finished-at="2020-12-12T06:32:50Z">
+    <test name="Smoke test cases" duration-ms="32719" started-at="2020-12-12T10:10:41Z" finished-at="2020-12-12T10:11:14Z">
       <class name="com.org.qa.testcases.CreateLeadPage">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.org.qa.testcases.CreateLeadPage@1556f2dd]" name="setUp" is-config="true" duration-ms="16389" started-at="2020-12-12T06:32:26Z" finished-at="2020-12-12T06:32:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.org.qa.testcases.CreateLeadPage@be64738]" name="setUp" is-config="true" duration-ms="24113" started-at="2020-12-12T10:10:41Z" description="Initialize the browser" finished-at="2020-12-12T10:11:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifypagename()[pri:1, instance:com.org.qa.testcases.CreateLeadPage@1556f2dd]" name="verifypagename" duration-ms="63" started-at="2020-12-12T06:32:42Z" description="This Test case From Test level to verify Page name" finished-at="2020-12-12T06:32:42Z">
+        <test-method status="PASS" signature="verifypagename()[pri:1, instance:com.org.qa.testcases.CreateLeadPage@be64738]" name="verifypagename" duration-ms="93" started-at="2020-12-12T10:11:06Z" description="This Test case From Test level to verify Page name" finished-at="2020-12-12T10:11:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifypagename -->
-        <test-method status="PASS" signature="verifypagetitle()[pri:2, instance:com.org.qa.testcases.CreateLeadPage@1556f2dd]" name="verifypagetitle" duration-ms="15" started-at="2020-12-12T06:32:42Z" description="This Test case From Test level to verify Page title" finished-at="2020-12-12T06:32:43Z">
+        <test-method status="PASS" signature="verifypagetitle()[pri:2, instance:com.org.qa.testcases.CreateLeadPage@be64738]" name="verifypagetitle" duration-ms="23" started-at="2020-12-12T10:11:06Z" description="This Test case From Test level to verify Page title" finished-at="2020-12-12T10:11:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifypagetitle -->
-        <test-method status="PASS" signature="verifyPage()[pri:3, instance:com.org.qa.testcases.CreateLeadPage@1556f2dd]" name="verifyPage" duration-ms="6059" started-at="2020-12-12T06:32:43Z" description="This Test case From Test level to Enter User details" finished-at="2020-12-12T06:32:49Z">
+        <test-method status="PASS" signature="verifyPage()[pri:3, instance:com.org.qa.testcases.CreateLeadPage@be64738]" name="verifyPage" duration-ms="7477" started-at="2020-12-12T10:11:06Z" description="This Test case From Test level to Enter User details" finished-at="2020-12-12T10:11:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPage -->
-        <test-method status="PASS" signature="verifyfirstname()[pri:4, instance:com.org.qa.testcases.CreateLeadPage@1556f2dd]" name="verifyfirstname" duration-ms="42" started-at="2020-12-12T06:32:49Z" description="This Test case From Test level to verify first name" finished-at="2020-12-12T06:32:49Z">
+        <test-method status="PASS" signature="verifyfirstname()[pri:4, instance:com.org.qa.testcases.CreateLeadPage@be64738]" name="verifyfirstname" duration-ms="64" started-at="2020-12-12T10:11:13Z" description="This Test case From Test level to verify first name" finished-at="2020-12-12T10:11:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyfirstname -->
-        <test-method status="FAIL" signature="verifyleadtitle()[pri:5, instance:com.org.qa.testcases.CreateLeadPage@1556f2dd]" name="verifyleadtitle" duration-ms="15" started-at="2020-12-12T06:32:49Z" description="This Test case From Test level to verify page title" finished-at="2020-12-12T06:32:49Z">
+        <test-method status="FAIL" signature="verifyleadtitle()[pri:5, instance:com.org.qa.testcases.CreateLeadPage@be64738]" name="verifyleadtitle" duration-ms="24" started-at="2020-12-12T10:11:13Z" description="This Test case From Test level to verify page title" finished-at="2020-12-12T10:11:13Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Correct lead page expected [View Lead | opentaps CRM1] but found [View Lead | opentaps CRM]]]>
@@ -39,7 +39,7 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at com.org.qa.testcases.CreateLeadPage.verifyleadtitle(CreateLeadPage.java:120)
+at com.org.qa.testcases.CreateLeadPage.verifyleadtitle(CreateLeadPage.java:130)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -71,7 +71,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyleadtitle -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.org.qa.testcases.CreateLeadPage@1556f2dd]" name="teardown" is-config="true" duration-ms="576" started-at="2020-12-12T06:32:49Z" finished-at="2020-12-12T06:32:50Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.org.qa.testcases.CreateLeadPage@be64738]" name="teardown" is-config="true" duration-ms="612" started-at="2020-12-12T10:11:13Z" description="Closing the browser" finished-at="2020-12-12T10:11:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

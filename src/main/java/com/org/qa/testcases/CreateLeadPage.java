@@ -19,16 +19,8 @@ import com.org.qa.pages.CreateLead;
 import com.org.qa.pages.Login;
 import com.org.qa.util.UtilTest;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Link;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
-import io.qameta.allure.Story;
-
 @Listeners({TestAllureReports.class})
+//@Listeners({ExtentITestListenerClassAdapter.class})
 public class CreateLeadPage extends TestBase {
 
 	Login login;
@@ -57,13 +49,14 @@ public class CreateLeadPage extends TestBase {
  * 
  */
 	@Test(priority=1, description = "This Test case From Test level to verify Page name")
-	@Epic("To Create lead")
-	@Feature("Create lead feature")
-	@Step("Verifying the page name")
-	@Link("http://leaftap.com")
-	@Severity(SeverityLevel.CRITICAL)
-	@Description("This test cases is from Allure report level to verify Page name")
-	@Story("This is from allure story level to verify Page name")
+	/*@Epic("To Create lead")
+	* @Feature("Create lead feature")
+	  @Step("Verifying the page name")
+	  @Link("http://leaftap.com")
+	  @Severity(SeverityLevel.CRITICAL)
+	  @Description("This test cases is from Allure report level to verify Page name")
+	  @Story("This is from allure story level to verify Page name")
+	*/
 	public void verifypagename()
 	{
 		String pageName = create.verifyPageName();
@@ -71,9 +64,10 @@ public class CreateLeadPage extends TestBase {
 	}
 
 	@Test(priority=2, description = "This Test case From Test level to verify Page title")
-	@Severity(SeverityLevel.MINOR)
+	/*@Severity(SeverityLevel.MINOR)
 	@Description("This test cases is from Allure report level to verify page title")
 	@Story("This is from allure story level to verify page title")
+	*/
 	public void verifypagetitle()
 	{
 		String pagetitle = create.verifyPageTitle();	
@@ -81,9 +75,10 @@ public class CreateLeadPage extends TestBase {
 	}
 
 	@Test(priority=3, enabled=false, description = "This Test case From Test level to Enter User details")
-	@Severity(SeverityLevel.BLOCKER)
+	/*@Severity(SeverityLevel.BLOCKER)
 	@Description("This test cases is from Allure report level to Enter User details")
 	@Story("This is from allure story level to Enter User details")
+	*/
 	public void verifyPage(String Companyname, String Firstname, String Lastname, String Phonenumber)
 	{
 		create.enterCompanyName(Companyname);
@@ -94,9 +89,10 @@ public class CreateLeadPage extends TestBase {
 	}
 	
 	@Test(priority=3, enabled=true, description = "This Test case From Test level to Enter User details")
-	@Severity(SeverityLevel.BLOCKER)
+	/*@Severity(SeverityLevel.BLOCKER)
 	@Description("This test cases is from Allure report level to Enter User details")
 	@Story("This is from allure story level to Enter User details")
+	*/
 	public void verifyPage()
 	{
 		create.enterCompanyName(prop.getProperty("companyname"));
@@ -108,9 +104,11 @@ public class CreateLeadPage extends TestBase {
 	}
 
 	@Test(priority=4, description = "This Test case From Test level to verify first name")
+	/*
 	@Severity(SeverityLevel.NORMAL)
 	@Description("This test cases is from Allure report level to verify first name")
 	@Story("This is from allure story level to verify first name")
+	*/
 	public void verifyfirstname()
 	{
 		String firstname = create.verifyFirstName();
@@ -118,9 +116,11 @@ public class CreateLeadPage extends TestBase {
 	}
 
 	@Test(priority=5, description = "This Test case From Test level to verify page title")
+	/*
 	@Severity(SeverityLevel.MINOR)
 	@Description("This test cases is from Allure report level to verify page title")
 	@Story("This is from allure story level to verify page title")
+	*/
 	public void verifyleadtitle()
 	{
 		String viewlead = create.verifyPageTitle();
