@@ -69,7 +69,7 @@ public class TestBase implements Element
 		
 		ChromeOptions co = new ChromeOptions();
 		co.merge(dc);
-		
+		//
 		String baseurl = "http://192.168.43.221:4444/wd/hub";
 		WebDriver d = new RemoteWebDriver(new URL(baseurl), co);
 		}
