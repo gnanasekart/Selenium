@@ -46,13 +46,13 @@ public class CreateLead extends TestBase
 		PageFactory.initElements(d, this);
 	}
 	
-	@Step("Launch into CreateLead Page....")
+	//@Step("Launch into CreateLead Page....")
 	public void createLead()
 	{
 		clkcreatelead.click();
 	}
 
-	@Step("verifying the page title....")
+	//@Step("verifying the page title....")
 	public String verifyPageTitle()
 	{	
 		String title = d.getTitle();
@@ -65,21 +65,21 @@ public class CreateLead extends TestBase
 		return pname;
 	}
 	
-	@Step("Entering company name as : {0}")
+	//@Step("Entering company name as : {0}")
 	public CreateLead enterCompanyName(String cname)
 	{
 		clearAndType(companyname, cname);
 		return this;
 	}
 
-	@Step("Entering first name as : {0}")
+	//@Step("Entering first name as : {0}")
 	public CreateLead enterFirstName(String firstname)
 	{
 		clearAndType(fname, firstname);
 		return this;
 	}	
 	
-	@Step("Entering last name as : {0}")
+	//@Step("Entering last name as : {0}")
 	public CreateLead enterLastName(String lastname)
 	{
 		clearAndType(lname, lastname);

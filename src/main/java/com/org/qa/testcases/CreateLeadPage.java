@@ -125,7 +125,7 @@ public class CreateLeadPage extends TestBase {
 	{
 		String viewlead = create.verifyPageTitle();
 		Assert.assertTrue(viewlead.contains("View Lead"));
-		Assert.assertEquals(viewlead, "View Lead | opentaps CRM1", "Correct lead page");
+		Assert.assertEquals(viewlead, "View Lead | opentaps CRM", "Correct lead page");
 	}
 
 	@AfterTest(description = "Closing the browser")

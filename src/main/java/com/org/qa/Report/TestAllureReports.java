@@ -1,7 +1,5 @@
 package com.org.qa.Report;
 
-import java.io.File;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -10,8 +8,6 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.org.qa.base.TestBase;
-
-import io.qameta.allure.Attachment;
 
 public class TestAllureReports extends TestBase implements ITestListener {
 
@@ -56,7 +52,7 @@ public class TestAllureReports extends TestBase implements ITestListener {
 
 	}
 	
-	@Attachment(value = "image001", type = "image/png")
+	//@Attachment(value = "image001", type = "image/png")
 	public byte[] saveScreenShotAsPNG(WebDriver d)
 	{
 		byte[] output = ((TakesScreenshot)d).getScreenshotAs(OutputType.BYTES);

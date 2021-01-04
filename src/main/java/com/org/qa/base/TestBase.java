@@ -42,7 +42,8 @@ public class TestBase implements Element
 		FileInputStream ip;
 		try
 		{
-		ip = new FileInputStream("D:\\eclipse\\workspace\\Selenium\\src\\main\\java\\com\\org\\qa\\config\\config.properties");
+			String dir = System.getProperty("user.dir");
+		ip = new FileInputStream("./src/main/java/com/org/qa/config/config.properties");
 			prop.load(ip);
 		} 
 		catch (FileNotFoundException e) 
@@ -57,8 +58,6 @@ public class TestBase implements Element
 
 	public void initialize() throws MalformedURLException
 	{
-		
-		
 		String browser = prop.getProperty("browser");
 		
 		if(browser.equals("gchrome")) 
