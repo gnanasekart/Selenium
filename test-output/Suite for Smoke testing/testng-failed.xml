@@ -9,7 +9,11 @@
       <class name="com.org.qa.testcases.CreateLeadPage">
         <methods>
           <include name="teardown"/>
+          <include name="verifypagetitle"/>
+          <include name="verifyPage"/>
+          <include name="verifypagename"/>
           <include name="verifyleadtitle"/>
+          <include name="verifyfirstname"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.org.qa.testcases.CreateLeadPage -->
