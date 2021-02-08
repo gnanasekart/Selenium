@@ -19,7 +19,9 @@ public class UtilTest extends TestBase
 	public static long PAGE_LOAD_TIMEOUT=20 ;
 	public static long IMPLICIT_WAIT = 10;
 	public static String EXCEL_NAME = "leaddetails";
-	
+
+	public static int bigNumber = 9090;
+
 	
 	public void switchToFrameName(String fname)
 	{
