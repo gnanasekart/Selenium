@@ -20,6 +20,8 @@ public class UtilTest extends TestBase
 	public static long IMPLICIT_WAIT = 10;
 	public static String EXCEL_NAME = "leaddetails";
 	
+	public static int bigNumber = 909090909090;
+	
 	public void switchToFrameName(String fname)
 	{
 		d.switchTo().frame(fname);
