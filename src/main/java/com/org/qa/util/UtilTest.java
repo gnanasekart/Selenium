@@ -19,14 +19,7 @@ public class UtilTest extends TestBase
 	public static long PAGE_LOAD_TIMEOUT=20 ;
 	public static long IMPLICIT_WAIT = 10;
 	public static String EXCEL_NAME = "leaddetails";
-	public static long EXPLICIT_WAIT = 20;
 	
-	//sekar change
-	public static void takeScreenshotAtEndOfTest1() throws IOException {
-		File scrFile = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
-		String currentDir = System.getProperty("user.dir");
-		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
-	}
 	
 	public void switchToFrameName(String fname)
 	{
@@ -58,11 +51,6 @@ public class UtilTest extends TestBase
 	}
 
 	public static void takeScreenshotAtEndOfTest() throws IOException {
-		File scrFile = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
-		String currentDir = System.getProperty("user.dir");
-		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
-	}
-	public static void takeScreenshotAtEndOfTests() throws IOException {
 		File scrFile = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
