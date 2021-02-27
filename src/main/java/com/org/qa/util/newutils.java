@@ -18,6 +18,7 @@ public class newutils extends TestBase {
 	public static long PAGE_LOAD_TIMEOUT=20 ;
 	public static long IMPLICIT_WAIT = 10;
 	public static String EXCEL_NAME = "leaddetails";
+	public static String a = "lead";
 
 	public static int bigNumber = 9090;
 
@@ -53,6 +54,7 @@ public class newutils extends TestBase {
 
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
+		String b = a + "new string";
 		String currentDir = System.getProperty("user.dir");
 		
 	}
