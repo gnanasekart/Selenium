@@ -54,7 +54,7 @@ public class newutils extends TestBase {
 
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
-		String b = a + "new string";
+		String b = a + "c";
 		String currentDir = System.getProperty("user.dir");
 		
 	}
